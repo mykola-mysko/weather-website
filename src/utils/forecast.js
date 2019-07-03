@@ -18,8 +18,9 @@ const forecast = (latitude, longitude, callback) => {
                     currently.precipProbability
                 } % chance of rain. ${daily.data[0].summary}
 
-                The humidity is ${daily.data[0].humidity *
-                    100}%. The wind speed is ${daily.data[0].windSpeed} m/s`
+                The humidity is ${(daily.data[0].humidity * 100).toFixed(
+                    1
+                )}%. The wind speed is ${daily.data[0].windSpeed} m/s`
             );
         }
     });
