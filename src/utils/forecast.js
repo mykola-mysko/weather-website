@@ -16,7 +16,10 @@ const forecast = (latitude, longitude, callback) => {
                     currently.temperature
                 } degrees out. There is a ${
                     currently.precipProbability
-                } % chance of rain. ${daily.data[0].summary}`
+                } % chance of rain. ${daily.data[0].summary}
+
+                The humidity is ${daily.data[0].humidity *
+                    100}%. The wind speed is ${daily.data[0].windSpeed} m/s`
             );
         }
     });
